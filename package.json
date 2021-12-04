@@ -1,0 +1,32 @@
+{
+  "name": "nodeStart",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rm -rf build",
+    "build": "npm run clean && npm run lint && ./node_modules/.bin/tsc",
+    "lint": "./node_modules/.bin/eslint ./**/*.ts",
+    "test": "npm run build && nyc ./node_modules/.bin/mocha build/test/**/*.js -R mochawesome"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/assert": "^1.5.6",
+    "@types/mocha": "^9.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.5.0",
+    "@typescript-eslint/parser": "^5.5.0",
+    "assert": "^2.0.0",
+    "eslint": "^7.32.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.2.0",
+    "mocha": "^9.1.3",
+    "mochawesome": "^7.0.1",
+    "nyc": "^15.1.0",
+    "ts-node": "^10.4.0",
+    "typescript": "4.5.2"
+  }
+}
